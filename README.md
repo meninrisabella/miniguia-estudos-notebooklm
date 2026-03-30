@@ -1,128 +1,127 @@
-# miniguia-estudos-notebooklm
-# Miniguia de Estudos: Modelos de Linguagem e Engenharia de Prompts
-
-## 🎯 Contexto e Objetivos
-
+Miniguia de Estudos: Modelos de Linguagem e Engenharia de Prompts
+Contexto e Objetivos
 Este projeto tem como objetivo explorar o funcionamento dos modelos de linguagem (LLMs) e o uso de técnicas de engenharia de prompts como ferramenta de aprendizagem ativa.
-
 A proposta foi utilizar Inteligência Artificial de forma crítica para compreender:
 
-* Como modelos de linguagem processam texto
-* O papel dos tokens e da janela de contexto
-* Como prompts influenciam diretamente as respostas
-* Limitações como alucinações e vieses
+Como modelos de linguagem processam texto
+O papel dos tokens e da janela de contexto
+Como prompts influenciam diretamente as respostas
+Limitações como alucinações e vieses
 
 O objetivo final é consolidar o aprendizado em um miniguia reutilizável para estudos futuros.
 
----
-
-## 📖 Curadoria de Fontes
-
+Fontes
 As seguintes fontes foram utilizadas no NotebookLM:
 
-1. https://platform.openai.com/docs/introduction
-2. https://developers.google.com/machine-learning/glossary
-3. https://huggingface.co/learn/nlp-course
-4. https://arxiv.org/pdf/2005.14165.pdf
-5. https://www.promptingguide.ai/
+OpenAI Platform Docs — documentação oficial sobre como usar e entender os modelos da OpenAI
+Google ML Glossary — glossário de referência para termos de machine learning
+HuggingFace NLP Course — curso aberto e prático sobre processamento de linguagem natural
+GPT-3 Paper (Brown et al., 2020) — paper técnico original do GPT-3; utilizei especificamente as seções 1 (Introduction) e 2 (Approach) para entender a arquitetura e o conceito de few-shot learning
+Prompting Guide — guia prático e atualizado sobre técnicas de engenharia de prompts
 
----
 
-##  Engenharia de Prompts e "Cicatrizes"
+Engenharia de Prompts e "Cicatrizes"
+Prompt 1 — Tokens
+Pergunta inicial:
 
-###  Prompt 1
-
-**Pergunta:**
 "O que são tokens em modelos de linguagem?"
 
-**Resultado:**
-Resposta clara, mas inicialmente genérica.
+Resposta obtida (problemática):
 
-**Ajuste feito:**
-"Explique tokens de forma simples, com exemplos práticos."
+"Tokens são unidades de texto usadas pelos modelos de linguagem. Eles podem representar palavras, partes de palavras ou caracteres, dependendo do tokenizador utilizado."
 
-**Aprendizado:**
-Prompts mais específicos geram respostas mais úteis.
+Problema identificado: A resposta era correta, mas abstrata demais. Não ficou claro o que isso significa na prática para quem está aprendendo.
+Prompt ajustado:
 
----
+"Explique tokens de forma simples, com exemplos práticos usando frases do dia a dia."
 
-### Prompt 2
+Resposta obtida (melhorada):
 
-**Pergunta:**
+"A palavra 'aprendizado' pode ser dividida em tokens como ['apren', 'diz', 'ado']. A frase 'Eu gosto de IA' pode ter 5 ou 6 tokens dependendo do modelo. Isso importa porque modelos têm um limite de tokens por resposta — quanto mais tokens você usa no prompt, menos sobra para a resposta."
+
+Aprendizado: Pedir exemplos concretos e cotidianos transforma uma definição técnica em algo compreensível e memorável.
+
+Prompt 2 — Janela de Contexto
+Pergunta inicial:
+
 "Como funciona a janela de contexto?"
 
-**Problema:**
-Resposta técnica demais.
+Resposta obtida (problemática):
 
-**Ajuste:**
-"Explique como memória de curto prazo, com analogia simples."
+"A janela de contexto é o número máximo de tokens que o modelo pode processar simultaneamente, incluindo o prompt e a resposta gerada. Modelos mais recentes como o GPT-4 Turbo suportam até 128k tokens."
 
-**Aprendizado:**
-Adicionar contexto melhora compreensão.
+Problema identificado: Resposta muito técnica, cheia de números sem explicação do impacto real.
+Prompt ajustado:
 
----
+"Explique a janela de contexto como se fosse a memória de curto prazo de uma pessoa, usando uma analogia simples."
 
-### Prompt 3
+Resposta obtida (melhorada):
 
-**Pergunta:**
+"Imagine que você está lendo um livro, mas só consegue lembrar das últimas 10 páginas. Tudo que veio antes simplesmente some da sua memória. A janela de contexto funciona assim: o modelo só 'enxerga' o trecho da conversa que cabe dentro desse limite. Se a conversa for longa, ele esquece o que foi dito no início."
+
+Aprendizado: Analogias do cotidiano são mais eficientes do que definições técnicas quando o objetivo é compreensão, não precisão formal.
+
+Prompt 3 — Técnicas de Engenharia de Prompt
+Pergunta inicial:
+
 "Como melhorar respostas de IA?"
 
-**Ajuste aplicado:**
-"Liste técnicas de engenharia de prompt com exemplos."
+Resposta obtida (problemática):
 
-**Resultado:**
-Resposta estruturada e mais prática.
+"Para melhorar respostas de IA, você pode ajustar a temperatura, usar system prompts, aplicar técnicas de chain-of-thought e explorar few-shot learning."
 
----
+Problema identificado: A resposta listou termos técnicos sem explicar o que cada um significa ou como aplicá-los na prática.
+Prompt ajustado:
 
-### Dificuldades encontradas
+"Liste as principais técnicas de engenharia de prompt com uma explicação simples e um exemplo de cada."
 
-* Respostas genéricas quando o prompt era vago
-* Excesso de informação técnica sem direcionamento
-* Necessidade de reformular perguntas várias vezes
+Resposta obtida (melhorada):
 
----
+"1. Few-shot: Dê exemplos antes de fazer a pergunta. Ex: 'Traduza: gato = cat, cachorro = dog. E cadeira?' 2. Chain-of-thought: Peça para o modelo pensar passo a passo. Ex: 'Resolva esse problema e explique cada etapa.' 3. Role prompting: Dê um papel ao modelo. Ex: 'Você é um professor de ensino médio. Explique fotossíntese.'"
 
-## 📘 Miniguia de Estudo
+Aprendizado: Perguntas vagas geram respostas vagas. Quanto mais específico o prompt, mais acionável a resposta.
 
-### Resumo Estruturado
+Dificuldades encontradas
 
-Modelos de linguagem são sistemas de IA que processam texto dividindo-o em tokens e gerando respostas com base em probabilidades aprendidas durante o treinamento.
+Prompts curtos e vagos resultavam em respostas genéricas e pouco úteis
+Termos técnicos sem contexto geravam respostas corretas, mas incompreensíveis para iniciantes
+Foi necessário reformular as perguntas entre 2 e 3 vezes até obter respostas realmente aproveitáveis
+Aprendi que o prompt ideal combina: contexto + formato esperado + exemplo ou analogia
 
-Eles operam dentro de uma janela de contexto limitada, que define quantas informações podem ser consideradas ao mesmo tempo.
 
-A qualidade das respostas depende diretamente do prompt, que orienta o modelo sobre o que e como responder.
+Miniguia de Estudo
+Resumo Estruturado
+Modelos de linguagem são sistemas de IA que processam texto dividindo-o em tokens — unidades mínimas de texto — e geram respostas com base em probabilidades aprendidas durante o treinamento com bilhões de exemplos.
+Esses modelos operam dentro de uma janela de contexto limitada, que funciona como uma memória de curto prazo: apenas o trecho visível da conversa é considerado. Quando a conversa ultrapassa esse limite, informações anteriores são "esquecidas".
+A qualidade das respostas depende diretamente do prompt: uma instrução vaga gera uma resposta genérica; uma instrução específica, com formato e contexto definidos, gera respostas muito mais úteis.
+Apesar de eficientes, esses modelos podem gerar alucinações — respostas incorretas apresentadas com confiança —, o que exige análise crítica de tudo que é gerado.
 
-Apesar de eficientes, esses modelos podem gerar alucinações, ou seja, respostas incorretas ou inventadas, exigindo análise crítica.
+Glossário
+TermoDefiniçãoExemploTokenUnidade mínima de texto processada pelo modelo"aprendizado" pode virar 3 tokens: ['apren', 'diz', 'ado']Janela de contextoLimite de informação que o modelo considera por vezComo lembrar só das últimas 10 páginas de um livroPromptInstrução dada ao modelo para guiar a resposta"Explique como se eu tivesse 10 anos"Few-shot learningUso de exemplos no prompt para guiar o formato da respostaMostrar 2 traduções antes de pedir a terceiraChain-of-thoughtPedir que o modelo pense passo a passo"Resolva e explique cada etapa"AlucinaçãoResposta incorreta gerada com aparente confiançaModelo inventa uma citação que não existeLLMModelo de linguagem de grande escala treinado em enormes volumes de textoGPT-4, Gemini, Claude
 
----
+Prompts Reutilizáveis
+Para aprender conceitos:
 
-### Glossário
+"Explique [conceito] como se eu fosse iniciante, com uma analogia do cotidiano"
+"Explique [conceito] em até 3 frases simples e depois dê um exemplo prático"
 
-**Token:** Unidade básica do texto processado pelo modelo
-**Janela de contexto:** Limite de informação que o modelo consegue considerar
-**Prompt:** Instrução dada ao modelo
-**Few-shot learning:** Uso de exemplos para guiar respostas
-**Alucinação:** Resposta incorreta gerada pela IA
-**LLM:** Modelo de linguagem de grande escala
+Para organizar informação:
 
----
+"Resuma o texto abaixo em tópicos claros, do mais importante para o menos importante"
+"Liste vantagens e desvantagens de [tema] em formato de tabela"
 
-### Prompts reutilizáveis
+Para aprofundar o estudo:
 
-* "Explique [conceito] de forma simples com exemplos"
-* "Resuma o texto abaixo em tópicos claros"
-* "Liste vantagens e desvantagens de [tema]"
-* "Explique como se eu fosse iniciante"
-* "Organize a resposta em formato de lista"
+"Quais são as perguntas mais comuns de iniciantes sobre [tema]? Responda cada uma delas"
+"Me dê um quiz de 5 perguntas sobre [tema] com gabarito ao final"
 
----
+Para revisar:
 
-## Conclusão
+"Organize os conceitos abaixo em um mapa mental em formato de texto"
+"Quais pontos do meu resumo estão incompletos ou imprecisos?"
 
-Este projeto demonstrou como a Inteligência Artificial pode ser utilizada como ferramenta ativa de aprendizado, destacando a importância da formulação de boas perguntas e da análise crítica das respostas geradas.
 
----
-
+Conclusão
+Este projeto me mostrou que usar IA para aprender exige uma postura ativa: não basta fazer a pergunta — é preciso avaliar a resposta, identificar o que faltou e reformular. Cada prompt mal feito foi uma oportunidade de entender melhor o que eu realmente queria saber. Mais do que aprender sobre LLMs, aprendi a fazer perguntas melhores — e isso é uma habilidade que vai muito além do uso de IA.
 
 
