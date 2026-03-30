@@ -1,5 +1,5 @@
 # miniguia-estudos-notebooklm
-# 📚 Miniguia de Estudos: Modelos de Linguagem e Engenharia de Prompts
+# Miniguia de Estudos: Modelos de Linguagem e Engenharia de Prompts
 
 ## 🎯 Contexto e Objetivos
 
@@ -28,9 +28,9 @@ As seguintes fontes foram utilizadas no NotebookLM:
 
 ---
 
-## 🧠 Engenharia de Prompts e "Cicatrizes"
+##  Engenharia de Prompts e "Cicatrizes"
 
-### 🔹 Prompt 1
+###  Prompt 1
 
 **Pergunta:**
 "O que são tokens em modelos de linguagem?"
@@ -46,7 +46,7 @@ Prompts mais específicos geram respostas mais úteis.
 
 ---
 
-### 🔹 Prompt 2
+### Prompt 2
 
 **Pergunta:**
 "Como funciona a janela de contexto?"
@@ -62,7 +62,7 @@ Adicionar contexto melhora compreensão.
 
 ---
 
-### 🔹 Prompt 3
+### Prompt 3
 
 **Pergunta:**
 "Como melhorar respostas de IA?"
@@ -75,7 +75,7 @@ Resposta estruturada e mais prática.
 
 ---
 
-### 🔹 Dificuldades encontradas
+### Dificuldades encontradas
 
 * Respostas genéricas quando o prompt era vago
 * Excesso de informação técnica sem direcionamento
@@ -85,7 +85,7 @@ Resposta estruturada e mais prática.
 
 ## 📘 Miniguia de Estudo
 
-### 🔹 Resumo Estruturado
+### Resumo Estruturado
 
 Modelos de linguagem são sistemas de IA que processam texto dividindo-o em tokens e gerando respostas com base em probabilidades aprendidas durante o treinamento.
 
@@ -97,7 +97,7 @@ Apesar de eficientes, esses modelos podem gerar alucinações, ou seja, resposta
 
 ---
 
-### 🔹 Glossário
+### Glossário
 
 **Token:** Unidade básica do texto processado pelo modelo
 **Janela de contexto:** Limite de informação que o modelo consegue considerar
@@ -108,7 +108,7 @@ Apesar de eficientes, esses modelos podem gerar alucinações, ou seja, resposta
 
 ---
 
-### 🔹 Prompts reutilizáveis
+### Prompts reutilizáveis
 
 * "Explique [conceito] de forma simples com exemplos"
 * "Resuma o texto abaixo em tópicos claros"
@@ -118,7 +118,7 @@ Apesar de eficientes, esses modelos podem gerar alucinações, ou seja, resposta
 
 ---
 
-## 🚀 Conclusão
+## Conclusão
 
 Este projeto demonstrou como a Inteligência Artificial pode ser utilizada como ferramenta ativa de aprendizado, destacando a importância da formulação de boas perguntas e da análise crítica das respostas geradas.
 
